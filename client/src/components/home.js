@@ -100,9 +100,15 @@ const HomePage = () => {
         <div style={styles.welcomeMessage}>
           <h3>Welcome to playlist app...</h3>
           <h4>You can search movies and add them to your playlists...</h4>
-
         </div>
-      
+      {/* Conditional rendering of carousel */}
+      {toSearch.trim() === '' && (
+        <div className="carousel" style={{ marginLeft: '30%', marginTop: '25px' }}>
+          <button onClick={prevImage} className="carousel-button carousel-button-left">{'<'}</button>
+          <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="carousel-image" height={400} width={600} />
+          <button onClick={nextImage} className="carousel-button carousel-button-right">{'>'}</button>
+        </div>
+      )}
 
       <div className='row w-100 m-2'>
         <ListMovie movies={movies} />

@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 const cors = require('cors');
 
-app.use(cors()); // Enable CORS for all routes
+app.use(cors({origin:'https://movielister.vercel.app'})); // Enable CORS for all routes
 const PORT = process.env.PORT || 5000;
 
 // Middleware

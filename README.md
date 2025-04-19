@@ -33,7 +33,7 @@ movie-playlist-api/
 ```
 
 ## End points:
--  SignUP end-point: `https://movie-library-l7p0.onrender.com/api/users/create` .
+-  SignUP end-point: `https://movielister.onrender.com/api/users/create` .
 ```
 Method: POST
 Body: 
@@ -55,7 +55,7 @@ Response:
 ![image](https://github.com/manish831/Movie-Library/assets/74316266/15a409ab-0211-48d6-9e5f-691c276b55c8)
 
 
-- Login End-Point: `https://movie-library-l7p0.onrender.com/api/users/login`
+- Login End-Point: `https://movielister.onrender.com/api/users/login`
 ```
 Method: POST
 Body:
@@ -73,7 +73,7 @@ Response:
 ![image](https://github.com/manish831/Movie-Library/assets/74316266/23081e0d-9e9d-496a-b4ae-f85c698380f2)
 
 ## Playlist related end-points
-- Create Playlist : `https://movie-library-l7p0.onrender.com/api/playlist/create`
+- Create Playlist : `https://movielister.onrender.com/api/playlist/create`
 ```
 Method: POST
 Body:
@@ -106,8 +106,8 @@ Response:
 ```
 ![image](https://github.com/manish831/Movie-Library/assets/74316266/875b95bb-43df-48bd-b2e5-a25e3e3b0103)
 
-- Get Playlist: `https://movie-library-l7p0.onrender.com/api/playlist/${userId}`
-- For Eg: `https://movie-library-l7p0.onrender.com/api/playlist/663e7664ad6ca6736e620d31`
+- Get Playlist: `https://movielister.onrender.com/api/playlist/${userId}`
+- For Eg: `https://movielister.onrender.com/api/playlist/663e7664ad6ca6736e620d31`
 ```
 Method: GET
 Body:
@@ -134,8 +134,8 @@ Response:
 ```
 ![image](https://github.com/manish831/Movie-Library/assets/74316266/794b0be4-0029-46e4-a15d-2c501047b94d)
 
-- Update Playlist: `https://movie-library-l7p0.onrender.com/api/playlist/${playlistId}`
-- For eg: `https://movie-library-l7p0.onrender.com/api/playlist/663ec3b19311cca047e6140e`
+- Update Playlist: `https://movielister.onrender.com/api/playlist/${playlistId}`
+- For eg: `https://movielister.onrender.com/api/playlist/663ec3b19311cca047e6140e`
 
 ```
 Method: PATCH

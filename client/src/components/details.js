@@ -17,18 +17,12 @@ const MovieInfo = () => {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('authToken');
       console.log(token);
-      const response = await fetch(`https://movie-library-l7p0.onrender.com/api/playlist/${userId}`, {
+      const response = await fetch(`https://movielister.onrender.com/api/playlist/${userId}`, {
         method: 'GET',
         headers: {
           'Authorization': token
         }
       });
-      // const response = await fetch(`http://localhost:5000/api/playlist/${userId}`, {
-      //   method: 'GET',
-      //   headers: {
-      //     'Authorization': token
-      //   }
-      // });
       if (response.ok) {
         const playlists = await response.json();
         setExistingPlaylists(playlists);
@@ -38,7 +32,6 @@ const MovieInfo = () => {
       }
     } catch (error) {
       console.error('Error fetching existing playlists:', error);
-      // Optionally, display an error message to the user
     }
   };
 
@@ -50,7 +43,7 @@ const MovieInfo = () => {
         movieId: id
       };
 
-      const response = await fetch(`https://movie-library-l7p0.onrender.com/api/playlist/${playlistId}`, {
+      const response = await fetch(`https://movielister.onrender.com/api/playlist/${playlistId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -58,14 +51,6 @@ const MovieInfo = () => {
         },
         body: JSON.stringify(playlistData)
       });
-      // const response = await fetch(`http://localhost:5000/api/playlist/${playlistId}`, {
-      //   method: 'PATCH',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     'Authorization': token
-      //   },
-      //   body: JSON.stringify(playlistData)
-      // });
 
       if (!response.ok) {
         throw new Error('Failed to add movie to playlist');
@@ -103,7 +88,7 @@ const MovieInfo = () => {
         public: isPublic
       };
 
-      const response = await fetch('https://movie-library-l7p0.onrender.com/api/playlist/create', {
+      const response = await fetch('https://movielister.onrender.com/api/playlist/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,14 +96,6 @@ const MovieInfo = () => {
         },
         body: JSON.stringify(playlistData)
       });
-      // const response = await fetch('http://localhost:5000/api/playlist/create', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     'Authorization': token
-      //   },
-      //   body: JSON.stringify(playlistData)
-      // });
       
       if (!response.ok) {
         throw new Error('Failed to create playlist');
